@@ -1,12 +1,26 @@
 <!-- alurapic/client/app/listagem/listagem.component.html -->
 
 <div class="jumbotron">
-        <h1 class="text-center">Alurapic</h1>
+        <h1 class="text-center">Angular pictures App</h1>
     </div>
     <div class="container">
-    
         <div class="row">
-            <painel *ngFor="let foto of fotos" titulo="{{foto.titulo}}" class="col-md-2">
+            <div class="col-md-12">
+                <form>
+                     <div class="input-group">
+                        <span class="input-group-btn">
+                            <a [routerLink]="['/cadastro']" class="btn btn-primary">
+                                Nova foto
+                            </a>
+                        </span>
+                        <!-- campo para filtrar pelo titulo -->
+                        <input class="form-control" #textoProcurado (keyup)="0" placeholder="filtrar pelo título da foto">
+                    </div> 
+                </form>
+            </div> <!-- fim col-md-12 -->
+        </div> <!-- fim row -->
+        <div class="row">
+            <painel *ngFor="let foto of fotos | filtroPorTitulo:textoProcurado.value" titulo="{{foto.titulo}}" class="col-md-2">
                 <foto titulo="{{foto.titulo}}" url="{{foto.url}}">
                 </foto>
             </painel>
