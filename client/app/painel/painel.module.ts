@@ -1,10 +1,10 @@
 // alurapic/client/app/painel/painel.module.ts
 
 import { NgModule } from '@angular/core';
-import { painelComponent } from './painel.component';
+import { PainelComponent } from './painel.component';
 
 @NgModule({
-  declarations: [ painelComponent ],
-  exports: [painelComponent]
+  declarations: [ PainelComponent ],
+  exports: [PainelComponent]
 })
 export class PainelModule { }

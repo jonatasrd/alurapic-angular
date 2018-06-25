@@ -12,7 +12,7 @@ export class BotaoComponent {
     @Input() tipo: string = 'button';
     @Input() desabilitado: boolean = false;
     @Output() acao = new EventEmitter();
-    @Input() confirmacao: boolean = false;
+    @Input() confirmacao: boolean;
 
     executaAcao() {
         if(this.confirmacao) {

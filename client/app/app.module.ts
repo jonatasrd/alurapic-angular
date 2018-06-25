@@ -12,6 +12,7 @@ import { ListagemComponent }   from './listagem/listagem.component'; // importou
 import { routing } from './app.routes';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BotaoModule } from './botao/botao.module';
+import { ModalModule } from './modal/modal.module';
 
 @NgModule({
     imports:[ 
@@ -22,7 +23,8 @@ import { BotaoModule } from './botao/botao.module';
       routing,
       FormsModule,
       ReactiveFormsModule,
-      BotaoModule
+      BotaoModule,
+      ModalModule
     ],
     declarations: [ 
       AppComponent, 

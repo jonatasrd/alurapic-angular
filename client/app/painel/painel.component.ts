@@ -6,12 +6,12 @@ import {Component, Input, OnInit, ElementRef} from '@angular/core';
     templateUrl: './painel.component.html',
     styleUrls: ['./painel.component.css']
 })
-export class painelComponent implements OnInit{
+export class PainelComponent implements OnInit{
     @Input() titulo: string;
-    elemento: ElementRef;
+    private elemento: ElementRef;
 
-    constructor(element: ElementRef){
-        this.elemento = element;
+    constructor(elemento: ElementRef){
+        this.elemento = elemento;
     }
 
     ngOnInit(){
@@ -22,6 +22,6 @@ export class painelComponent implements OnInit{
     }
 
     fadeOut(cb){
-        $(this.elemento).fadeOut(cb);
+        $(this.elemento.nativeElement).fadeOut(cb);
     }
 }
